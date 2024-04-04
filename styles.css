@@ -1,7 +1,33 @@
-div {
-    width: 50px;
-    height: 50px;
-    display: block;
-    position: relative;
-    float: left;
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 510px;
+    padding: 1px;
+    width: 510px;
+    margin: auto;
+}
+
+#container div {
+    background: #fed26a;
+    background: linear-gradient(to bottom, #fed26a, #fec238);
+    box-shadow: 0 2.5px 5px rgba(25, 25, 25, 0.1);
+    flex-grow: 1;
+    margin: 1px;
+    width: 24%;
+}
+
+#container div:hover {
+    background: #7ad0ff;
+    background: linear-gradient(to bottom, #7ad0ff, #47beff);
+    -webkit-animation-duration: 4s;
+    animation-duration: 1s;
 }
