@@ -1,11 +1,14 @@
 window.onload = function() {
     const colors = ['#e74c3c', '#8e44ad', '#3498db', '#e67e22', '#2ecc71'];
     const container = document.querySelector('#container');
+    const button = document.querySelector('button');
+    let totalSquares = 15;
     let i = 0;
     let j = 0;
 
-    for (i = 1; i <= 4; i++) {
-        for (j = 1; j <= 4; j++) {
+    function createGrid(totalSquares) {
+        container.innerHTML = '';
+        for (i = 0; i <= totalSquares; i++) {
             const square = document.createElement('div');
             square.classList.add('square');
 
@@ -20,6 +23,7 @@ window.onload = function() {
             container.appendChild(square);
         };
     };
+    createGrid(totalSquares);
 
     function setColorToEl(element) {
         const color = getRandomColor();
@@ -35,5 +39,17 @@ window.onload = function() {
     function getRandomColor() {
         return colors[Math.floor(Math.random() * colors.length)];
     }
+
+    button.addEventListener('click', () => {
+        totalSquares = prompt('How many squares', 16);
+        if (totalSquares => 100) {
+            totalSquares = prompt('Choose a number equal to or less than 100', 16);
+            if (totalSquares => 100) {
+                totalSquares = 100;
+            };
+        };
+        createGrid(totalSquares);
+        console.log(totalSquares);
+    })
 
 };
