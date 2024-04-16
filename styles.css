@@ -45,16 +45,17 @@ button {
     display: flex;
     align-items: center;
 	flex-wrap: wrap;
-	max-width: 144px;
+    min-width: 144px;
+    gap: 4px; /* Set the gap between squares */
 }
 
 .square {
 	background-color: #1d1d1d;
 	box-shadow: 0 0 2px #000;
     flex-grow: 1;
+    width: calc(32px - 4px); /* Adjust for the gap */
+    height: calc(32px - 4px); /* Adjust for the gap */
     margin: 2px;
-    width: 32px;
-    height: 32px;
 	transition: 2s ease;
 }
 
