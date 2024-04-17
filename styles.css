@@ -15,6 +15,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
+    margin-top: 40px;
 }
 
 .wrapper {
@@ -46,19 +47,22 @@ button {
     align-items: center;
 	flex-wrap: wrap;
     min-width: 144px;
-    gap: 4px; /* Set the gap between squares */
+    outline:2px solid #999;
+    margin: 0 40px;
 }
 
-.square {
+.grid {
 	background-color: #1d1d1d;
 	box-shadow: 0 0 2px #000;
     flex-grow: 1;
     width: calc(32px - 4px); /* Adjust for the gap */
     height: calc(32px - 4px); /* Adjust for the gap */
     margin: 2px;
+    opacity: 0;
 	transition: 2s ease;
 }
 
-.square:hover {
+.grid:hover {
+    opacity: 0.75;
 	transition-duration: 0s;
 }
